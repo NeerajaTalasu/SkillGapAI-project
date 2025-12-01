@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SkillGap AI - Upload</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .upload-container {
+            width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.15);
+            text-align: center;
+        }
+
+        h1 {
+            color: #1d4ed8;
+            font-size: 34px;
+            margin-top: 10px;
+        }
+
+        p {
+            color: #475569;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .file-row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .file-box {
+            flex: 1;
+            background: #f1f5f9;
+            border: 2px dashed #3b82f6;
+            padding: 15px;
+            border-radius: 12px;
+        }
+
+        .file-box label {
+            font-weight: 600;
+            color: #1e293b;
+            font-size: 14px;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            padding: 14px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1e40af;
+        }
+
+        img {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="upload-container">
+    <img src="https://cdn-icons-png.flaticon.com/512/850/850960.png">
+
+    <h1>SkillGap AI</h1>
+    <p>Upload your Resume & Job Description to Analyze Skill Gap</p>
+
+    <form action="/process" method="POST" enctype="multipart/form-data">
+        <div class="file-row">
+            <div class="file-box">
+                <label>Select Resume (PDF)</label><br><br>
+                <input type="file" name="resume" accept="application/pdf" required>
+            </div>
+
+            <div class="file-box">
+                <label>Select Job Description (PDF)</label><br><br>
+                <input type="file" name="jd" accept="application/pdf" required>
+            </div>
+        </div>
+
+        <button type="submit">Analyze Skill Gap</button>
+    </form>
+</div>
+
+</body>
+</html>
